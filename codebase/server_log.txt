@@ -1,0 +1,349 @@
+2025-03-07 10:32:25.480031: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-03-07 10:32:26.386570: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-03-07 10:32:29,132 - MedicalDiagnosisServer - INFO - Using models directory: F:\projects\aicte25-techSaksham-p4p2\models
+2025-03-07 10:32:29,132 - MedicalDiagnosisServer - INFO - Scanning models directory: F:\projects\aicte25-techSaksham-p4p2\models
+2025-03-07 10:32:29,132 - MedicalDiagnosisServer - INFO - Found 14 files in models directory
+2025-03-07 10:32:29,132 - MedicalDiagnosisServer - INFO - Found random_forest model for diabetes: diabetes_random_forest_model.pkl
+2025-03-07 10:32:29,132 - MedicalDiagnosisServer - INFO - Found disease_tensorflow model for heart: heart_disease_tensorflow_model.keras
+2025-03-07 10:32:29,132 - MedicalDiagnosisServer - INFO - Found logistic_regression model for hypothyroid: hypothyroid_logistic_regression_model.pkl
+2025-03-07 10:32:29,132 - MedicalDiagnosisServer - INFO - Found cancer_logistic_regression model for lung: lung_cancer_logistic_regression_model.pkl
+2025-03-07 10:32:29,132 - MedicalDiagnosisServer - INFO - Found cancer_random_forest model for lung: lung_cancer_random_forest_model.pkl
+2025-03-07 10:32:29,132 - MedicalDiagnosisServer - INFO - Found cancer_tensorflow model for lung: lung_cancer_tensorflow_model.keras
+2025-03-07 10:32:29,132 - MedicalDiagnosisServer - INFO - Found tensorflow model for parkinsons: parkinsons_tensorflow_model.keras
+2025-03-07 10:32:29,132 - MedicalDiagnosisServer - INFO - Selected random_forest model for diabetes
+2025-03-07 10:32:29,258 - MedicalDiagnosisServer - INFO - Loaded scikit-learn model from F:\projects\aicte25-techSaksham-p4p2\models\diabetes_random_forest_model.pkl
+2025-03-07 10:32:29,258 - MedicalDiagnosisServer - INFO - Loaded scaler from F:\projects\aicte25-techSaksham-p4p2\models\diabetes_scaler.pkl
+2025-03-07 10:32:29,258 - MedicalDiagnosisServer - INFO - Selected disease_tensorflow model for heart
+2025-03-07 10:32:29.277442: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-03-07 10:32:29,478 - MedicalDiagnosisServer - INFO - Loaded TensorFlow model from F:\projects\aicte25-techSaksham-p4p2\models\heart_disease_tensorflow_model.keras
+2025-03-07 10:32:29,478 - MedicalDiagnosisServer - WARNING - Scaler file not found: F:\projects\aicte25-techSaksham-p4p2\models\heart_scaler.pkl
+2025-03-07 10:32:29,478 - MedicalDiagnosisServer - WARNING - No scaler found for heart. Using default StandardScaler.
+2025-03-07 10:32:29,478 - MedicalDiagnosisServer - INFO - Selected logistic_regression model for hypothyroid
+2025-03-07 10:32:29,478 - MedicalDiagnosisServer - INFO - Loaded scikit-learn model from F:\projects\aicte25-techSaksham-p4p2\models\hypothyroid_logistic_regression_model.pkl
+2025-03-07 10:32:29,478 - MedicalDiagnosisServer - INFO - Loaded scaler from F:\projects\aicte25-techSaksham-p4p2\models\hypothyroid_scaler.pkl
+2025-03-07 10:32:29,478 - MedicalDiagnosisServer - INFO - Selected cancer_logistic_regression model for lung
+2025-03-07 10:32:29,478 - MedicalDiagnosisServer - INFO - Loaded scikit-learn model from F:\projects\aicte25-techSaksham-p4p2\models\lung_cancer_logistic_regression_model.pkl
+2025-03-07 10:32:29,478 - MedicalDiagnosisServer - WARNING - Scaler file not found: F:\projects\aicte25-techSaksham-p4p2\models\lung_scaler.pkl
+2025-03-07 10:32:29,478 - MedicalDiagnosisServer - WARNING - No scaler found for lung. Using default StandardScaler.
+2025-03-07 10:32:29,478 - MedicalDiagnosisServer - INFO - Selected tensorflow model for parkinsons
+2025-03-07 10:32:29,605 - MedicalDiagnosisServer - INFO - Loaded TensorFlow model from F:\projects\aicte25-techSaksham-p4p2\models\parkinsons_tensorflow_model.keras
+2025-03-07 10:32:29,605 - MedicalDiagnosisServer - INFO - Loaded scaler from F:\projects\aicte25-techSaksham-p4p2\models\parkinsons_scaler.pkl
+2025-03-07 10:32:29,605 - MedicalDiagnosisServer - INFO - Loaded 5 models
+2025-03-07 10:32:29,605 - MedicalDiagnosisServer - INFO - Starting Medical Diagnosis Server with 5 models from F:\projects\aicte25-techSaksham-p4p2\models
+ * Serving Flask app 'server'
+ * Debug mode: on
+2025-03-07 10:32:30,543 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.7.67.201:5000
+2025-03-07 10:32:30,543 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-07 10:32:30,543 - werkzeug - INFO -  * Restarting with stat
+2025-03-07 10:32:31.165466: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-03-07 10:32:32.067134: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-03-07 10:32:34,710 - MedicalDiagnosisServer - INFO - Using models directory: F:\projects\aicte25-techSaksham-p4p2\models
+2025-03-07 10:32:34,710 - MedicalDiagnosisServer - INFO - Scanning models directory: F:\projects\aicte25-techSaksham-p4p2\models
+2025-03-07 10:32:34,710 - MedicalDiagnosisServer - INFO - Found 14 files in models directory
+2025-03-07 10:32:34,710 - MedicalDiagnosisServer - INFO - Found random_forest model for diabetes: diabetes_random_forest_model.pkl
+2025-03-07 10:32:34,710 - MedicalDiagnosisServer - INFO - Found disease_tensorflow model for heart: heart_disease_tensorflow_model.keras
+2025-03-07 10:32:34,710 - MedicalDiagnosisServer - INFO - Found logistic_regression model for hypothyroid: hypothyroid_logistic_regression_model.pkl
+2025-03-07 10:32:34,710 - MedicalDiagnosisServer - INFO - Found cancer_logistic_regression model for lung: lung_cancer_logistic_regression_model.pkl
+2025-03-07 10:32:34,710 - MedicalDiagnosisServer - INFO - Found cancer_random_forest model for lung: lung_cancer_random_forest_model.pkl
+2025-03-07 10:32:34,710 - MedicalDiagnosisServer - INFO - Found cancer_tensorflow model for lung: lung_cancer_tensorflow_model.keras
+2025-03-07 10:32:34,710 - MedicalDiagnosisServer - INFO - Found tensorflow model for parkinsons: parkinsons_tensorflow_model.keras
+2025-03-07 10:32:34,710 - MedicalDiagnosisServer - INFO - Selected random_forest model for diabetes
+2025-03-07 10:32:34,835 - MedicalDiagnosisServer - INFO - Loaded scikit-learn model from F:\projects\aicte25-techSaksham-p4p2\models\diabetes_random_forest_model.pkl
+2025-03-07 10:32:34,835 - MedicalDiagnosisServer - INFO - Loaded scaler from F:\projects\aicte25-techSaksham-p4p2\models\diabetes_scaler.pkl
+2025-03-07 10:32:34,835 - MedicalDiagnosisServer - INFO - Selected disease_tensorflow model for heart
+2025-03-07 10:32:34.862817: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-03-07 10:32:35,046 - MedicalDiagnosisServer - INFO - Loaded TensorFlow model from F:\projects\aicte25-techSaksham-p4p2\models\heart_disease_tensorflow_model.keras
+2025-03-07 10:32:35,046 - MedicalDiagnosisServer - WARNING - Scaler file not found: F:\projects\aicte25-techSaksham-p4p2\models\heart_scaler.pkl
+2025-03-07 10:32:35,046 - MedicalDiagnosisServer - WARNING - No scaler found for heart. Using default StandardScaler.
+2025-03-07 10:32:35,046 - MedicalDiagnosisServer - INFO - Selected logistic_regression model for hypothyroid
+2025-03-07 10:32:35,046 - MedicalDiagnosisServer - INFO - Loaded scikit-learn model from F:\projects\aicte25-techSaksham-p4p2\models\hypothyroid_logistic_regression_model.pkl
+2025-03-07 10:32:35,046 - MedicalDiagnosisServer - INFO - Loaded scaler from F:\projects\aicte25-techSaksham-p4p2\models\hypothyroid_scaler.pkl
+2025-03-07 10:32:35,046 - MedicalDiagnosisServer - INFO - Selected cancer_logistic_regression model for lung
+2025-03-07 10:32:35,046 - MedicalDiagnosisServer - INFO - Loaded scikit-learn model from F:\projects\aicte25-techSaksham-p4p2\models\lung_cancer_logistic_regression_model.pkl
+2025-03-07 10:32:35,046 - MedicalDiagnosisServer - WARNING - Scaler file not found: F:\projects\aicte25-techSaksham-p4p2\models\lung_scaler.pkl
+2025-03-07 10:32:35,046 - MedicalDiagnosisServer - WARNING - No scaler found for lung. Using default StandardScaler.
+2025-03-07 10:32:35,046 - MedicalDiagnosisServer - INFO - Selected tensorflow model for parkinsons
+2025-03-07 10:32:35,181 - MedicalDiagnosisServer - INFO - Loaded TensorFlow model from F:\projects\aicte25-techSaksham-p4p2\models\parkinsons_tensorflow_model.keras
+2025-03-07 10:32:35,181 - MedicalDiagnosisServer - INFO - Loaded scaler from F:\projects\aicte25-techSaksham-p4p2\models\parkinsons_scaler.pkl
+2025-03-07 10:32:35,181 - MedicalDiagnosisServer - INFO - Loaded 5 models
+2025-03-07 10:32:35,181 - MedicalDiagnosisServer - INFO - Starting Medical Diagnosis Server with 5 models from F:\projects\aicte25-techSaksham-p4p2\models
+2025-03-07 10:32:35,181 - werkzeug - WARNING -  * Debugger is active!
+2025-03-07 10:32:35,196 - werkzeug - INFO -  * Debugger PIN: 772-129-502
+2025-03-07 10:32:35,904 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:32:35] "GET /health HTTP/1.1" 200 -
+2025-03-07 10:32:36,376 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:32:36] "GET / HTTP/1.1" 200 -
+2025-03-07 10:32:36,832 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:32:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-07 10:32:36,832 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:32:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-07 10:32:40,696 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:32:40] "GET /predict/hypothyroid HTTP/1.1" 200 -
+2025-03-07 10:32:40,785 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:32:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-07 10:32:44,072 - MedicalDiagnosisServer - INFO - Expected features for hypothyroid: ['age', 'sex', 'on_thyroxine', 'query_hypothyroid', 'on_antithyroid_medication', 'sick', 'pregnant', 'thyroid_surgery', 'I131_treatment', 'query_hyperthyroid', 'lithium', 'goitre', 'tumor', 'hypopituitary', 'psych', 'TSH_measured', 'TSH', 'T3_measured', 'T3', 'TT4_measured', 'TT4', 'T4U_measured', 'T4U', 'FTI_measured', 'FTI', 'TBG_measured', 'TBG', 'referral_source', 'other']
+2025-03-07 10:32:44,072 - MedicalDiagnosisServer - INFO - Form data keys: ['age', 'sex', 'on_thyroxine', 'query_hypothyroid', 'on_antithyroid_medication', 'sick', 'pregnant', 'thyroid_surgery', 'TSH', 'T3', 'TT4', 'T4U', 'FTI']
+2025-03-07 10:32:44,072 - MedicalDiagnosisServer - WARNING - Missing feature I131_treatment in form data, using default value 0
+2025-03-07 10:32:44,072 - MedicalDiagnosisServer - WARNING - Missing feature query_hyperthyroid in form data, using default value 0
+2025-03-07 10:32:44,072 - MedicalDiagnosisServer - WARNING - Missing feature lithium in form data, using default value 0
+2025-03-07 10:32:44,072 - MedicalDiagnosisServer - WARNING - Missing feature goitre in form data, using default value 0
+2025-03-07 10:32:44,072 - MedicalDiagnosisServer - WARNING - Missing feature tumor in form data, using default value 0
+2025-03-07 10:32:44,072 - MedicalDiagnosisServer - WARNING - Missing feature hypopituitary in form data, using default value 0
+2025-03-07 10:32:44,072 - MedicalDiagnosisServer - WARNING - Missing feature psych in form data, using default value 0
+2025-03-07 10:32:44,072 - MedicalDiagnosisServer - WARNING - Missing feature TSH_measured in form data, using default value 0
+2025-03-07 10:32:44,073 - MedicalDiagnosisServer - WARNING - Missing feature T3_measured in form data, using default value 0
+2025-03-07 10:32:44,073 - MedicalDiagnosisServer - WARNING - Missing feature TT4_measured in form data, using default value 0
+2025-03-07 10:32:44,073 - MedicalDiagnosisServer - WARNING - Missing feature T4U_measured in form data, using default value 0
+2025-03-07 10:32:44,073 - MedicalDiagnosisServer - WARNING - Missing feature FTI_measured in form data, using default value 0
+2025-03-07 10:32:44,073 - MedicalDiagnosisServer - WARNING - Missing feature TBG_measured in form data, using default value 0
+2025-03-07 10:32:44,073 - MedicalDiagnosisServer - WARNING - Missing feature TBG in form data, using default value 0
+2025-03-07 10:32:44,073 - MedicalDiagnosisServer - WARNING - Missing feature referral_source in form data, using default value 0
+2025-03-07 10:32:44,073 - MedicalDiagnosisServer - WARNING - Missing feature other in form data, using default value 0
+2025-03-07 10:32:44,074 - MedicalDiagnosisServer - INFO - Input dataframe columns: ['age', 'sex', 'on_thyroxine', 'query_hypothyroid', 'on_antithyroid_medication', 'sick', 'pregnant', 'thyroid_surgery', 'I131_treatment', 'query_hyperthyroid', 'lithium', 'goitre', 'tumor', 'hypopituitary', 'psych', 'TSH_measured', 'TSH', 'T3_measured', 'T3', 'TT4_measured', 'TT4', 'T4U_measured', 'T4U', 'FTI_measured', 'FTI', 'TBG_measured', 'TBG', 'referral_source', 'other']
+2025-03-07 10:32:44,075 - MedicalDiagnosisServer - ERROR - Error in scaling: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- FTI_measured
+- I131_treatment
+- T3_measured
+- T4U_measured
+- TBG_measured
+- ...
+Feature names seen at fit time, yet now missing:
+- FTI measured
+- I131 treatment
+- T3 measured
+- T4U measured
+- TBG measured
+- ...
+
+2025-03-07 10:32:44,102 - MedicalDiagnosisServer - INFO - Dataframe used for scaling:     age  sex  on_thyroxine  ...  TBG  referral_source  other
+0  45.0    1             0  ...  0.0              0.0    0.0
+
+[1 rows x 29 columns]
+2025-03-07 10:32:44,104 - MedicalDiagnosisServer - INFO - Dataframe dtypes: age                          float64
+sex                            int64
+on_thyroxine                   int64
+query_hypothyroid              int64
+on_antithyroid_medication      int64
+sick                           int64
+pregnant                       int64
+thyroid_surgery                int64
+I131_treatment               float64
+query_hyperthyroid           float64
+lithium                      float64
+goitre                       float64
+tumor                        float64
+hypopituitary                float64
+psych                        float64
+TSH_measured                 float64
+TSH                          float64
+T3_measured                  float64
+T3                           float64
+TT4_measured                 float64
+TT4                          float64
+T4U_measured                 float64
+T4U                          float64
+FTI_measured                 float64
+FTI                          float64
+TBG_measured                 float64
+TBG                          float64
+referral_source              float64
+other                        float64
+dtype: object
+2025-03-07 10:32:44,113 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:32:44] "POST /predict/hypothyroid HTTP/1.1" 200 -
+2025-03-07 10:32:44,264 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:32:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-07 10:32:44,269 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:32:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-07 10:32:49,064 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:32:49] "GET / HTTP/1.1" 200 -
+2025-03-07 10:32:49,177 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:32:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-07 10:32:49,180 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:32:49] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-07 10:38:11,803 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:11] "GET / HTTP/1.1" 200 -
+2025-03-07 10:38:12,040 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-07 10:38:12,055 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:12] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-07 10:38:14,270 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:14] "GET /predict/diabetes HTTP/1.1" 200 -
+2025-03-07 10:38:14,459 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-07 10:38:16,874 - MedicalDiagnosisServer - INFO - Expected features for diabetes: ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age']
+2025-03-07 10:38:16,875 - MedicalDiagnosisServer - INFO - Form data keys: ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age']
+2025-03-07 10:38:16,876 - MedicalDiagnosisServer - INFO - Input dataframe columns: ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age']
+2025-03-07 10:38:16,891 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:16] "POST /predict/diabetes HTTP/1.1" 200 -
+2025-03-07 10:38:17,031 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-07 10:38:17,194 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:17] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-07 10:38:19,198 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:19] "GET / HTTP/1.1" 200 -
+2025-03-07 10:38:19,406 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-07 10:38:19,409 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:19] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-07 10:38:20,587 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:20] "GET /predict/heart HTTP/1.1" 200 -
+2025-03-07 10:38:20,714 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:20] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-07 10:38:23,934 - MedicalDiagnosisServer - INFO - Expected features for heart: ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal']
+2025-03-07 10:38:23,934 - MedicalDiagnosisServer - INFO - Form data keys: ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal']
+2025-03-07 10:38:23,935 - MedicalDiagnosisServer - INFO - Input dataframe columns: ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal']
+2025-03-07 10:38:23,935 - MedicalDiagnosisServer - INFO - Fitting new scaler for heart model
+
+[1m1/1[0m [32m====================[0m[37m[0m [1m0s[0m 100ms/step
+[1m1/1[0m [32m====================[0m[37m[0m [1m0s[0m 119ms/step
+2025-03-07 10:38:24,126 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:24] "POST /predict/heart HTTP/1.1" 200 -
+2025-03-07 10:38:24,255 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-07 10:38:24,257 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:24] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-07 10:38:27,118 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:27] "GET / HTTP/1.1" 200 -
+2025-03-07 10:38:27,271 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:27] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-07 10:38:27,277 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:27] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-07 10:38:29,412 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:29] "GET /predict/hypothyroid HTTP/1.1" 200 -
+2025-03-07 10:38:29,585 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-07 10:38:31,940 - MedicalDiagnosisServer - INFO - Expected features for hypothyroid: ['age', 'sex', 'on_thyroxine', 'query_hypothyroid', 'on_antithyroid_medication', 'sick', 'pregnant', 'thyroid_surgery', 'I131_treatment', 'query_hyperthyroid', 'lithium', 'goitre', 'tumor', 'hypopituitary', 'psych', 'TSH_measured', 'TSH', 'T3_measured', 'T3', 'TT4_measured', 'TT4', 'T4U_measured', 'T4U', 'FTI_measured', 'FTI', 'TBG_measured', 'TBG', 'referral_source', 'other']
+2025-03-07 10:38:31,940 - MedicalDiagnosisServer - INFO - Form data keys: ['age', 'sex', 'on_thyroxine', 'query_hypothyroid', 'on_antithyroid_medication', 'sick', 'pregnant', 'thyroid_surgery', 'TSH', 'T3', 'TT4', 'T4U', 'FTI']
+2025-03-07 10:38:31,940 - MedicalDiagnosisServer - WARNING - Missing feature I131_treatment in form data, using default value 0
+2025-03-07 10:38:31,940 - MedicalDiagnosisServer - WARNING - Missing feature query_hyperthyroid in form data, using default value 0
+2025-03-07 10:38:31,940 - MedicalDiagnosisServer - WARNING - Missing feature lithium in form data, using default value 0
+2025-03-07 10:38:31,940 - MedicalDiagnosisServer - WARNING - Missing feature goitre in form data, using default value 0
+2025-03-07 10:38:31,940 - MedicalDiagnosisServer - WARNING - Missing feature tumor in form data, using default value 0
+2025-03-07 10:38:31,940 - MedicalDiagnosisServer - WARNING - Missing feature hypopituitary in form data, using default value 0
+2025-03-07 10:38:31,940 - MedicalDiagnosisServer - WARNING - Missing feature psych in form data, using default value 0
+2025-03-07 10:38:31,940 - MedicalDiagnosisServer - WARNING - Missing feature TSH_measured in form data, using default value 0
+2025-03-07 10:38:31,940 - MedicalDiagnosisServer - WARNING - Missing feature T3_measured in form data, using default value 0
+2025-03-07 10:38:31,940 - MedicalDiagnosisServer - WARNING - Missing feature TT4_measured in form data, using default value 0
+2025-03-07 10:38:31,941 - MedicalDiagnosisServer - WARNING - Missing feature T4U_measured in form data, using default value 0
+2025-03-07 10:38:31,941 - MedicalDiagnosisServer - WARNING - Missing feature FTI_measured in form data, using default value 0
+2025-03-07 10:38:31,941 - MedicalDiagnosisServer - WARNING - Missing feature TBG_measured in form data, using default value 0
+2025-03-07 10:38:31,941 - MedicalDiagnosisServer - WARNING - Missing feature TBG in form data, using default value 0
+2025-03-07 10:38:31,941 - MedicalDiagnosisServer - WARNING - Missing feature referral_source in form data, using default value 0
+2025-03-07 10:38:31,941 - MedicalDiagnosisServer - WARNING - Missing feature other in form data, using default value 0
+2025-03-07 10:38:31,942 - MedicalDiagnosisServer - INFO - Input dataframe columns: ['age', 'sex', 'on_thyroxine', 'query_hypothyroid', 'on_antithyroid_medication', 'sick', 'pregnant', 'thyroid_surgery', 'I131_treatment', 'query_hyperthyroid', 'lithium', 'goitre', 'tumor', 'hypopituitary', 'psych', 'TSH_measured', 'TSH', 'T3_measured', 'T3', 'TT4_measured', 'TT4', 'T4U_measured', 'T4U', 'FTI_measured', 'FTI', 'TBG_measured', 'TBG', 'referral_source', 'other']
+2025-03-07 10:38:31,942 - MedicalDiagnosisServer - ERROR - Error in scaling: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- FTI_measured
+- I131_treatment
+- T3_measured
+- T4U_measured
+- TBG_measured
+- ...
+Feature names seen at fit time, yet now missing:
+- FTI measured
+- I131 treatment
+- T3 measured
+- T4U measured
+- TBG measured
+- ...
+
+2025-03-07 10:38:31,974 - MedicalDiagnosisServer - INFO - Dataframe used for scaling:     age  sex  on_thyroxine  ...  TBG  referral_source  other
+0  32.0    0             1  ...  0.0              0.0    0.0
+
+[1 rows x 29 columns]
+2025-03-07 10:38:31,976 - MedicalDiagnosisServer - INFO - Dataframe dtypes: age                          float64
+sex                            int64
+on_thyroxine                   int64
+query_hypothyroid              int64
+on_antithyroid_medication      int64
+sick                           int64
+pregnant                       int64
+thyroid_surgery                int64
+I131_treatment               float64
+query_hyperthyroid           float64
+lithium                      float64
+goitre                       float64
+tumor                        float64
+hypopituitary                float64
+psych                        float64
+TSH_measured                 float64
+TSH                          float64
+T3_measured                  float64
+T3                           float64
+TT4_measured                 float64
+TT4                          float64
+T4U_measured                 float64
+T4U                          float64
+FTI_measured                 float64
+FTI                          float64
+TBG_measured                 float64
+TBG                          float64
+referral_source              float64
+other                        float64
+dtype: object
+2025-03-07 10:38:31,980 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:31] "POST /predict/hypothyroid HTTP/1.1" 200 -
+2025-03-07 10:38:32,132 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-07 10:38:32,142 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:32] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-07 10:38:34,244 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:34] "GET / HTTP/1.1" 200 -
+2025-03-07 10:38:34,475 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-07 10:38:34,477 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:34] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-07 10:38:35,654 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:35] "GET /predict/lung HTTP/1.1" 200 -
+2025-03-07 10:38:35,835 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:35] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-07 10:38:39,039 - MedicalDiagnosisServer - INFO - Expected features for lung: ['GENDER', 'AGE', 'SMOKING', 'YELLOW_FINGERS', 'ANXIETY', 'PEER_PRESSURE', 'CHRONIC_DISEASE', 'FATIGUE', 'ALLERGY', 'WHEEZING', 'ALCOHOL_CONSUMING', 'COUGHING', 'SHORTNESS_OF_BREATH', 'SWALLOWING_DIFFICULTY', 'CHEST_PAIN']
+2025-03-07 10:38:39,039 - MedicalDiagnosisServer - INFO - Form data keys: ['GENDER', 'AGE', 'SMOKING', 'YELLOW_FINGERS', 'ANXIETY', 'PEER_PRESSURE', 'CHRONIC_DISEASE', 'FATIGUE', 'ALLERGY', 'WHEEZING', 'ALCOHOL_CONSUMING', 'COUGHING', 'SHORTNESS_OF_BREATH', 'SWALLOWING_DIFFICULTY', 'CHEST_PAIN']
+2025-03-07 10:38:39,041 - MedicalDiagnosisServer - INFO - Input dataframe columns: ['GENDER', 'AGE', 'SMOKING', 'YELLOW_FINGERS', 'ANXIETY', 'PEER_PRESSURE', 'CHRONIC_DISEASE', 'FATIGUE', 'ALLERGY', 'WHEEZING', 'ALCOHOL_CONSUMING', 'COUGHING', 'SHORTNESS_OF_BREATH', 'SWALLOWING_DIFFICULTY', 'CHEST_PAIN']
+2025-03-07 10:38:39,042 - MedicalDiagnosisServer - ERROR - Error in scaling: This StandardScaler instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+2025-03-07 10:38:39,053 - MedicalDiagnosisServer - INFO - Dataframe used for scaling:    GENDER   AGE  ...  SWALLOWING_DIFFICULTY  CHEST_PAIN
+0       0  23.0  ...                      0           0
+
+[1 rows x 15 columns]
+2025-03-07 10:38:39,054 - MedicalDiagnosisServer - INFO - Dataframe dtypes: GENDER                     int64
+AGE                      float64
+SMOKING                    int64
+YELLOW_FINGERS             int64
+ANXIETY                    int64
+PEER_PRESSURE              int64
+CHRONIC_DISEASE            int64
+FATIGUE                    int64
+ALLERGY                    int64
+WHEEZING                   int64
+ALCOHOL_CONSUMING          int64
+COUGHING                   int64
+SHORTNESS_OF_BREATH        int64
+SWALLOWING_DIFFICULTY      int64
+CHEST_PAIN                 int64
+dtype: object
+2025-03-07 10:38:39,056 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:39] "POST /predict/lung HTTP/1.1" 200 -
+2025-03-07 10:38:39,147 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-07 10:38:39,151 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:39] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-07 10:38:43,216 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:43] "GET / HTTP/1.1" 200 -
+2025-03-07 10:38:43,355 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-07 10:38:43,358 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:43] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-07 10:38:44,461 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:44] "GET /predict/parkinsons HTTP/1.1" 200 -
+2025-03-07 10:38:44,604 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-07 10:38:47,702 - MedicalDiagnosisServer - INFO - Expected features for parkinsons: ['MDVP:Fo(Hz)', 'MDVP:Fhi(Hz)', 'MDVP:Flo(Hz)', 'MDVP:Jitter(%)', 'MDVP:Jitter(Abs)', 'MDVP:RAP', 'MDVP:PPQ', 'Jitter:DDP', 'MDVP:Shimmer', 'MDVP:Shimmer(dB)', 'Shimmer:APQ3', 'Shimmer:APQ5', 'MDVP:APQ', 'Shimmer:DDA', 'NHR', 'HNR', 'RPDE', 'DFA', 'spread1', 'spread2', 'D2', 'PPE']
+2025-03-07 10:38:47,702 - MedicalDiagnosisServer - INFO - Form data keys: ['MDVP:Fo(Hz)', 'MDVP:Fhi(Hz)', 'MDVP:Flo(Hz)', 'MDVP:Jitter(%)', 'MDVP:Jitter(Abs)', 'MDVP:RAP', 'MDVP:PPQ', 'Jitter:DDP', 'MDVP:Shimmer', 'MDVP:Shimmer(dB)', 'Shimmer:APQ3', 'NHR', 'HNR', 'RPDE', 'DFA', 'spread1', 'spread2', 'D2', 'PPE']
+2025-03-07 10:38:47,703 - MedicalDiagnosisServer - WARNING - Missing feature Shimmer:APQ5 in form data, using default value 0
+2025-03-07 10:38:47,703 - MedicalDiagnosisServer - WARNING - Missing feature MDVP:APQ in form data, using default value 0
+2025-03-07 10:38:47,703 - MedicalDiagnosisServer - WARNING - Missing feature Shimmer:DDA in form data, using default value 0
+2025-03-07 10:38:47,704 - MedicalDiagnosisServer - INFO - Input dataframe columns: ['MDVP:Fo(Hz)', 'MDVP:Fhi(Hz)', 'MDVP:Flo(Hz)', 'MDVP:Jitter(%)', 'MDVP:Jitter(Abs)', 'MDVP:RAP', 'MDVP:PPQ', 'Jitter:DDP', 'MDVP:Shimmer', 'MDVP:Shimmer(dB)', 'Shimmer:APQ3', 'Shimmer:APQ5', 'MDVP:APQ', 'Shimmer:DDA', 'NHR', 'HNR', 'RPDE', 'DFA', 'spread1', 'spread2', 'D2', 'PPE']
+
+[1m1/1[0m [32m====================[0m[37m[0m [1m0s[0m 126ms/step
+[1m1/1[0m [32m====================[0m[37m[0m [1m0s[0m 149ms/step
+2025-03-07 10:38:47,921 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:47] "POST /predict/parkinsons HTTP/1.1" 200 -
+2025-03-07 10:38:48,035 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-07 10:38:48,036 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-07 10:38:51,743 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:51] "GET / HTTP/1.1" 200 -
+2025-03-07 10:38:51,924 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-07 10:38:51,927 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 10:38:51] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-07 10:41:18,920 - werkzeug - INFO -  * Detected change in 'F:\\projects\\aicte25-techSaksham-p4p2\\codebase\\utils.py', reloading
+2025-03-07 10:41:19,686 - werkzeug - INFO -  * Restarting with stat
+2025-03-07 10:41:20.340058: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-03-07 10:41:21.280283: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-03-07 10:41:24,046 - MedicalDiagnosisServer - INFO - Using models directory: F:\projects\aicte25-techSaksham-p4p2\models
+2025-03-07 10:41:24,046 - MedicalDiagnosisServer - INFO - Scanning models directory: F:\projects\aicte25-techSaksham-p4p2\models
+2025-03-07 10:41:24,061 - MedicalDiagnosisServer - INFO - Found 14 files in models directory
+2025-03-07 10:41:24,061 - MedicalDiagnosisServer - INFO - Found random_forest model for diabetes: diabetes_random_forest_model.pkl
+2025-03-07 10:41:24,061 - MedicalDiagnosisServer - INFO - Found disease_tensorflow model for heart: heart_disease_tensorflow_model.keras
+2025-03-07 10:41:24,061 - MedicalDiagnosisServer - INFO - Found logistic_regression model for hypothyroid: hypothyroid_logistic_regression_model.pkl
+2025-03-07 10:41:24,061 - MedicalDiagnosisServer - INFO - Found cancer_logistic_regression model for lung: lung_cancer_logistic_regression_model.pkl
+2025-03-07 10:41:24,061 - MedicalDiagnosisServer - INFO - Found cancer_random_forest model for lung: lung_cancer_random_forest_model.pkl
+2025-03-07 10:41:24,061 - MedicalDiagnosisServer - INFO - Found cancer_tensorflow model for lung: lung_cancer_tensorflow_model.keras
+2025-03-07 10:41:24,061 - MedicalDiagnosisServer - INFO - Found tensorflow model for parkinsons: parkinsons_tensorflow_model.keras
+2025-03-07 10:41:24,061 - MedicalDiagnosisServer - INFO - Selected random_forest model for diabetes
+2025-03-07 10:41:24,188 - MedicalDiagnosisServer - INFO - Loaded scikit-learn model from F:\projects\aicte25-techSaksham-p4p2\models\diabetes_random_forest_model.pkl
+2025-03-07 10:41:24,188 - MedicalDiagnosisServer - INFO - Loaded scaler from F:\projects\aicte25-techSaksham-p4p2\models\diabetes_scaler.pkl
+2025-03-07 10:41:24,188 - MedicalDiagnosisServer - INFO - Selected disease_tensorflow model for heart
+2025-03-07 10:41:24.205209: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-03-07 10:41:24,392 - MedicalDiagnosisServer - INFO - Loaded TensorFlow model from F:\projects\aicte25-techSaksham-p4p2\models\heart_disease_tensorflow_model.keras
+2025-03-07 10:41:24,392 - MedicalDiagnosisServer - WARNING - Scaler file not found: F:\projects\aicte25-techSaksham-p4p2\models\heart_scaler.pkl
+2025-03-07 10:41:24,392 - MedicalDiagnosisServer - WARNING - No scaler found for heart. Using default StandardScaler.
+2025-03-07 10:41:24,392 - MedicalDiagnosisServer - INFO - Selected logistic_regression model for hypothyroid
+2025-03-07 10:41:24,392 - MedicalDiagnosisServer - INFO - Loaded scikit-learn model from F:\projects\aicte25-techSaksham-p4p2\models\hypothyroid_logistic_regression_model.pkl
+2025-03-07 10:41:24,392 - MedicalDiagnosisServer - INFO - Loaded scaler from F:\projects\aicte25-techSaksham-p4p2\models\hypothyroid_scaler.pkl
+2025-03-07 10:41:24,392 - MedicalDiagnosisServer - INFO - Selected cancer_logistic_regression model for lung
+2025-03-07 10:41:24,392 - MedicalDiagnosisServer - INFO - Loaded scikit-learn model from F:\projects\aicte25-techSaksham-p4p2\models\lung_cancer_logistic_regression_model.pkl
+2025-03-07 10:41:24,392 - MedicalDiagnosisServer - WARNING - Scaler file not found: F:\projects\aicte25-techSaksham-p4p2\models\lung_scaler.pkl
+2025-03-07 10:41:24,392 - MedicalDiagnosisServer - WARNING - No scaler found for lung. Using default StandardScaler.
+2025-03-07 10:41:24,392 - MedicalDiagnosisServer - INFO - Selected tensorflow model for parkinsons
+2025-03-07 10:41:24,534 - MedicalDiagnosisServer - INFO - Loaded TensorFlow model from F:\projects\aicte25-techSaksham-p4p2\models\parkinsons_tensorflow_model.keras
+2025-03-07 10:41:24,534 - MedicalDiagnosisServer - INFO - Loaded scaler from F:\projects\aicte25-techSaksham-p4p2\models\parkinsons_scaler.pkl
+2025-03-07 10:41:24,534 - MedicalDiagnosisServer - INFO - Loaded 5 models
+2025-03-07 10:41:24,534 - MedicalDiagnosisServer - INFO - Starting Medical Diagnosis Server with 5 models from F:\projects\aicte25-techSaksham-p4p2\models
+2025-03-07 10:41:24,534 - werkzeug - WARNING -  * Debugger is active!
+2025-03-07 10:41:24,534 - werkzeug - INFO -  * Debugger PIN: 772-129-502

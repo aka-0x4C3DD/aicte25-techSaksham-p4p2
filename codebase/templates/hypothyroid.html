@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypothyroid Prediction | Medical Diagnosis System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header class="text-center my-4">
+            <h1 class="display-4">Medical Diagnosis System</h1>
+            <p class="lead">AI-powered diagnosis tools for multiple medical conditions</p>
+        </header>
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ url_for('index') }}">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Hypothyroid Prediction</li>
+            </ol>
+        </nav>
+
+        {% if error %}
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Error:</strong> {{ error }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endif %}
+
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h2 class="h4 mb-0">Hypothyroid Prediction</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="info-section">
+                            <h3>About Hypothyroidism</h3>
+                            <p>Hypothyroidism is a condition in which your thyroid gland doesn't produce enough thyroid hormone. This model predicts the likelihood of hypothyroidism based on several clinical measurements and patient characteristics.</p>
+                            <h4>Common Symptoms:</h4>
+                            <ul>
+                                <li>Fatigue</li>
+                                <li>Increased sensitivity to cold</li>
+                                <li>Constipation</li>
+                                <li>Dry skin</li>
+                                <li>Unexplained weight gain</li>
+                                <li>Puffy face</li>
+                                <li>Hoarseness</li>
+                                <li>Muscle weakness</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <form id="hypothyroidForm" method="post" action="{{ url_for('predict', disease='hypothyroid') }}" class="needs-validation" novalidate>
+                            <!-- Test data button -->
+                            <div class="mb-3 text-end">
+                                <button type="button" id="fillTestData" class="btn btn-outline-secondary btn-sm">
+                                    Fill with test data
+                                </button>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="age" class="form-label">Age (years):</label>
+                                <input type="number" class="form-control" id="age" name="age" min="1" max="120" required>
+                                <div class="invalid-feedback">Please provide a valid age</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="sex" class="form-label">Sex:</label>
+                                <select class="form-select" id="sex" name="sex" required>
+                                    <option value="" selected disabled>Select</option>
+                                    <option value="1">Male</option>
+                                    <option value="0">Female</option>
+                                </select>
+                                <div class="invalid-feedback">Please select gender</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="on_thyroxine" class="form-label">On Thyroxine Medication:</label>
+                                <select class="form-select" id="on_thyroxine" name="on_thyroxine" required>
+                                    <option value="" selected disabled>Select</option>
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                                <div class="invalid-feedback">Please select an option</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="query_hypothyroid" class="form-label">Query Hypothyroid:</label>
+                                <select class="form-select" id="query_hypothyroid" name="query_hypothyroid" required>
+                                    <option value="" selected disabled>Select</option>
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                                <div class="invalid-feedback">Please select an option</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="on_antithyroid_medication" class="form-label">On Antithyroid Medication:</label>
+                                <select class="form-select" id="on_antithyroid_medication" name="on_antithyroid_medication" required>
+                                    <option value="" selected disabled>Select</option>
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                                <div class="invalid-feedback">Please select an option</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="sick" class="form-label">Sick:</label>
+                                <select class="form-select" id="sick" name="sick" required>
+                                    <option value="" selected disabled>Select</option>
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                                <div class="invalid-feedback">Please select an option</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="pregnant" class="form-label">Pregnant:</label>
+                                <select class="form-select" id="pregnant" name="pregnant" required>
+                                    <option value="" selected disabled>Select</option>
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                                <div class="invalid-feedback">Please select an option</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="thyroid_surgery" class="form-label">Thyroid Surgery:</label>
+                                <select class="form-select" id="thyroid_surgery" name="thyroid_surgery" required>
+                                    <option value="" selected disabled>Select</option>
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                                <div class="invalid-feedback">Please select an option</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="TSH" class="form-label">Thyroid Stimulating Hormone (mU/L):</label>
+                                <input type="number" class="form-control" id="TSH" name="TSH" min="0" max="100" step="0.01" required>
+                                <div class="invalid-feedback">Please provide a valid value</div>
+                                <div class="form-text">Normal range: 0.4-4.0 mU/L</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="T3" class="form-label">Triiodothyronine (ng/dL):</label>
+                                <input type="number" class="form-control" id="T3" name="T3" min="0" max="10" step="0.01" required>
+                                <div class="invalid-feedback">Please provide a valid value</div>
+                                <div class="form-text">Normal range: 80-200 ng/dL</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="TT4" class="form-label">Total Thyroxine (μg/dL):</label>
+                                <input type="number" class="form-control" id="TT4" name="TT4" min="0" max="30" step="0.1" required>
+                                <div class="invalid-feedback">Please provide a valid value</div>
+                                <div class="form-text">Normal range: 4.5-12.0 μg/dL</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="T4U" class="form-label">T4 Uptake Ratio:</label>
+                                <input type="number" class="form-control" id="T4U" name="T4U" min="0" max="3" step="0.01" required>
+                                <div class="invalid-feedback">Please provide a valid value</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="FTI" class="form-label">Free Thyroxine Index:</label>
+                                <input type="number" class="form-control" id="FTI" name="FTI" min="0" max="200" step="0.1" required>
+                                <div class="invalid-feedback">Please provide a valid value</div>
+                            </div>
+                            
+                            <div class="text-center mt-4">
+                                <button type="submit" class="btn btn-primary px-4" id="predictBtn">Predict Hypothyroid Risk</button>
+                                <a href="{{ url_for('index') }}" class="btn btn-secondary ms-2">Back to Home</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mt-5 p-3 text-center text-muted border-top">
+            <p><strong>Note:</strong> This system is for educational purposes only and not a substitute for professional medical advice.</p>
+            <p>&copy; 2025 Medical Diagnosis System</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Form validation
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('hypothyroidForm');
+            const predictBtn = document.getElementById('predictBtn');
+            const formInputs = form.querySelectorAll('input, select');
+
+            // Function to check if the form is valid
+            function validateForm() {
+                let valid = true;
+                formInputs.forEach(input => {
+                    if (!input.value || input.value === '') {
+                        valid = false;
+                    }
+                });
+                return valid;
+            }
+
+            // Add event listeners to all inputs
+            formInputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    // Remove this line to keep button always enabled
+                    // predictBtn.disabled = !validateForm();
+                });
+            });
+
+            // Fill test data button
+            document.getElementById('fillTestData').addEventListener('click', function() {
+                // Generate random values within appropriate ranges
+                document.getElementById('age').value = Math.floor(Math.random() * 60) + 20; // Age between 20-80
+                document.getElementById('sex').value = Math.random() > 0.5 ? '1' : '0';  // Random gender
+                
+                // For yes/no binary fields
+                const generateBinaryValue = (probabilityOfYes = 0.2) => Math.random() < probabilityOfYes ? '1' : '0';
+                
+                document.getElementById('on_thyroxine').value = generateBinaryValue(0.3);
+                document.getElementById('query_hypothyroid').value = generateBinaryValue(0.2);
+                document.getElementById('on_antithyroid_medication').value = generateBinaryValue(0.15);
+                document.getElementById('sick').value = generateBinaryValue(0.25);
+                document.getElementById('pregnant').value = generateBinaryValue(0.1);
+                document.getElementById('thyroid_surgery').value = generateBinaryValue(0.1);
+                
+                // Lab values within normal ranges
+                document.getElementById('TSH').value = (Math.random() * 7 + 0.3).toFixed(1); // 0.3-7.3 mU/L
+                document.getElementById('T3').value = (Math.random() * 2.5 + 0.5).toFixed(1); // 0.5-3.0 ng/dL
+                document.getElementById('TT4').value = (Math.random() * 7.5 + 4.5).toFixed(1); // 4.5-12.0 μg/dL
+                document.getElementById('T4U').value = (Math.random() * 1 + 0.5).toFixed(2); // 0.5-1.5 ratio
+                document.getElementById('FTI').value = (Math.random() * 120 + 60).toFixed(1); // 60-180 index
+                
+                // Enable the predict button if all fields are filled
+                predictBtn.disabled = !validateForm();
+            });
+
+            // Bootstrap form validation
+            form.addEventListener('submit', function(event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            });
+        });
+    </script>
+</body>
+</html>

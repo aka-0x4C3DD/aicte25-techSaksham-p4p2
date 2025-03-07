@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Diagnosis System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header class="text-center my-4">
+            <h1 class="display-4">Medical Diagnosis System</h1>
+            <p class="lead">AI-powered diagnosis tools for multiple medical conditions</p>
+        </header>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h2 class="h4 mb-0">System Status</h2>
+            </div>
+            <div class="card-body">
+                <p>Available prediction models: {{ model_count }}</p>
+                <div class="row">
+                    {% for disease, available in available_models.items() %}
+                        <div class="col-md-4 mb-2">
+                            <div class="model-status">
+                                <span class="model-name">{{ disease.replace('_', ' ').title() }}</span>
+                                {% if available %}
+                                    <span class="badge bg-success">Available</span>
+                                {% else %}
+                                    <span class="badge bg-danger">Unavailable</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h2 class="h4 mb-0">Available Diagnoses</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h3 class="h5 card-title">Diabetes Prediction</h3>
+                                <p class="card-text">Predict the likelihood of diabetes based on health metrics.</p>
+                                {% if available_models.diabetes %}
+                                    <a href="{{ url_for('predict', disease='diabetes') }}" class="btn btn-primary">Start Diagnosis</a>
+                                {% else %}
+                                    <button class="btn btn-secondary" disabled>Model Unavailable</button>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h3 class="h5 card-title">Heart Disease Prediction</h3>
+                                <p class="card-text">Assess heart disease risk based on clinical parameters.</p>
+                                {% if available_models.heart %}
+                                    <a href="{{ url_for('predict', disease='heart') }}" class="btn btn-primary">Start Diagnosis</a>
+                                {% else %}
+                                    <button class="btn btn-secondary" disabled>Model Unavailable</button>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h3 class="h5 card-title">Hypothyroid Prediction</h3>
+                                <p class="card-text">Evaluate thyroid function based on clinical indicators.</p>
+                                {% if available_models.hypothyroid %}
+                                    <a href="{{ url_for('predict', disease='hypothyroid') }}" class="btn btn-primary">Start Diagnosis</a>
+                                {% else %}
+                                    <button class="btn btn-secondary" disabled>Model Unavailable</button>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h3 class="h5 card-title">Lung Cancer Prediction</h3>
+                                <p class="card-text">Assess lung cancer risk based on symptoms and health factors.</p>
+                                {% if available_models.lung %}
+                                    <a href="{{ url_for('predict', disease='lung') }}" class="btn btn-primary">Start Diagnosis</a>
+                                {% else %}
+                                    <button class="btn btn-secondary" disabled>Model Unavailable</button>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h3 class="h5 card-title">Parkinson's Disease Prediction</h3>
+                                <p class="card-text">Evaluate Parkinson's disease likelihood based on voice parameters.</p>
+                                {% if available_models.parkinsons %}
+                                    <a href="{{ url_for('predict', disease='parkinsons') }}" class="btn btn-primary">Start Diagnosis</a>
+                                {% else %}
+                                    <button class="btn btn-secondary" disabled>Model Unavailable</button>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mt-5 p-3 text-center text-muted border-top">
+            <p><strong>Note:</strong> This system is for educational purposes only and not a substitute for professional medical advice.</p>
+            <p>&copy; 2025 Medical Diagnosis System</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

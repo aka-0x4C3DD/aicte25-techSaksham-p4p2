@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parkinson's Disease Prediction | Medical Diagnosis System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header class="text-center my-4">
+            <h1 class="display-4">Medical Diagnosis System</h1>
+            <p class="lead">AI-powered diagnosis tools for multiple medical conditions</p>
+        </header>
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ url_for('index') }}">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Parkinson's Disease Prediction</li>
+            </ol>
+        </nav>
+
+        {% if error %}
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Error:</strong> {{ error }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endif %}
+
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h2 class="h4 mb-0">Parkinson's Disease Prediction</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="info-section">
+                            <h3>About Parkinson's Disease</h3>
+                            <p>Parkinson's disease is a progressive disorder of the nervous system that affects movement. This model uses voice parameter measurements to predict the likelihood of Parkinson's disease.</p>
+                            <h4>Common Symptoms:</h4>
+                            <ul>
+                                <li>Tremor</li>
+                                <li>Slowed movement (bradykinesia)</li>
+                                <li>Rigid muscles</li>
+                                <li>Impaired posture and balance</li>
+                                <li>Loss of automatic movements</li>
+                                <li>Speech changes</li>
+                                <li>Writing changes</li>
+                            </ul>
+                            <h4>About the Model:</h4>
+                            <p>This model uses acoustic features extracted from sustained phonations to detect patterns associated with Parkinson's disease. These features capture various aspects of voice tremor, breathiness, and other vocal characteristics that may indicate the presence of the disease.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <form id="parkinsonsForm" method="post" action="{{ url_for('predict', disease='parkinsons') }}" class="needs-validation" novalidate>
+                            <!-- Test data button -->
+                            <div class="mb-3 text-end">
+                                <button type="button" id="fillTestData" class="btn btn-outline-secondary btn-sm">
+                                    Fill with test data
+                                </button>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="MDVP:Fo(Hz)" class="form-label">Average Vocal Fundamental Frequency (Hz) [Range: 80-260]:</label>
+                                <input type="number" step="any" class="form-control" id="MDVP:Fo(Hz)" name="MDVP:Fo(Hz)" min="0" required>
+                                <div class="invalid-feedback">Please provide a valid value</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="MDVP:Fhi(Hz)" class="form-label">Maximum Vocal Fundamental Frequency (Hz) [Range: 100-600]:</label>
+                                <input type="number" step="any" class="form-control" id="MDVP:Fhi(Hz)" name="MDVP:Fhi(Hz)" min="0" required>
+                                <div class="invalid-feedback">Please provide a valid value</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="MDVP:Flo(Hz)" class="form-label">Minimum Vocal Fundamental Frequency (Hz) [Range: 65-240]:</label>
+                                <input type="number" step="any" class="form-control" id="MDVP:Flo(Hz)" name="MDVP:Flo(Hz)" min="0" required>
+                                <div class="invalid-feedback">Please provide a valid value</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="MDVP:Jitter(%)" class="form-label">Jitter Percentage (%) [Range: 0.0001-0.02]:</label>
+                                <input type="number" step="any" class="form-control" id="MDVP:Jitter(%)" name="MDVP:Jitter(%)" min="0" required>
+                                <div class="invalid-feedback">Please provide a valid value</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="MDVP:Jitter(Abs)" class="form-label">Absolute Jitter [Range: 0.000001-0.0001]:</label>
+                                <input type="number" step="any" class="form-control" id="MDVP:Jitter(Abs)" name="MDVP:Jitter(Abs)" min="0" required>
+                                <div class="invalid-feedback">Please provide a valid value</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="MDVP:RAP" class="form-label">Relative Amplitude Perturbation [Range: 0.0001-0.02]:</label>
+                                <input type="number" step="any" class="form-control" id="MDVP:RAP" name="MDVP:RAP" min="0" required>
+                                <div class="invalid-feedback">Please provide a valid value</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="MDVP:PPQ" class="form-label">Five-point Period Perturbation Quotient [Range: 0.0001-0.02]:</label>
+                                <input type="number" step="any" class="form-control" id="MDVP:PPQ" name="MDVP:PPQ" min="0" required>
+                                <div class="invalid-feedback">Please provide a valid value</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="Jitter:DDP" class="form-label">Average Absolute Difference of Differences [Range: 0.0001-0.05]:</label>
+                                <input type="number" step="any" class="form-control" id="Jitter:DDP" name="Jitter:DDP" min="0" required>
+                                <div class="invalid-feedback">Please provide a valid value</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="MDVP:Shimmer" class="form-label">Local Shimmer [Range: 0.01-0.15]:</label>
+                                <input type="number" step="any" class="form-control" id="MDVP:Shimmer" name="MDVP:Shimmer" min="0" required>
+                                <div class="invalid-feedback">Please provide a valid value</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="MDVP:Shimmer(dB)" class="form-label">Shimmer in dB [Range: 0.1-1.5]:</label>
+                                <input type="number" step="any" class="form-control" id="MDVP:Shimmer(dB)" name="MDVP:Shimmer(dB)" min="0" required>
+                                <div class="invalid-feedback">Please provide a valid value</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="Shimmer:APQ3" class="form-label">Three-point Amplitude Perturbation Quotient [Range: 0.01-0.15]:</label>
+                                <input type="number" step="any" class="form-control" id="Shimmer:APQ3" name="Shimmer:APQ3" min="0" required>
+                                <div class="invalid-feedback">Please provide a valid value</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="NHR" class="form-label">Noise-to-Harmonics Ratio [Range: 0.01-0.5]:</label>
+                                <input type="number" step="any" class="form-control" id="NHR" name="NHR" min="0" required>
+                                <div class="invalid-feedback">Please provide a valid value</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="HNR" class="form-label">Harmonics-to-Noise Ratio (dB) [Range: 8-30]:</label>
+                                <input type="number" step="any" class="form-control" id="HNR" name="HNR" min="0" required>
+                                <div class="invalid-feedback">Please provide a valid value</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="RPDE" class="form-label">Recurrence Period Density Entropy [Range: 0.25-0.7]:</label>
+                                <input type="number" step="any" class="form-control" id="RPDE" name="RPDE" min="0" max="1" required>
+                                <div class="invalid-feedback">Please provide a valid value</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="DFA" class="form-label">Detrended Fluctuation Analysis [Range: 0.5-1.0]:</label>
+                                <input type="number" step="any" class="form-control" id="DFA" name="DFA" min="0" required>
+                                <div class="invalid-feedback">Please provide a valid value</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="spread1" class="form-label">Spread1 (nonlinear measure) [Range: -8 to 0]:</label>
+                                <input type="number" step="any" class="form-control" id="spread1" name="spread1" required>
+                                <div class="invalid-feedback">Please provide a valid value</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="spread2" class="form-label">Spread2 (nonlinear measure) [Range: 0-4]:</label>
+                                <input type="number" step="any" class="form-control" id="spread2" name="spread2" required>
+                                <div class="invalid-feedback">Please provide a valid value</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="D2" class="form-label">Correlation Dimension [Range: 1.5-4]:</label>
+                                <input type="number" step="any" class="form-control" id="D2" name="D2" min="0" required>
+                                <div class="invalid-feedback">Please provide a valid value</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="PPE" class="form-label">Pitch Period Entropy [Range: 0.1-0.5]:</label>
+                                <input type="number" step="any" class="form-control" id="PPE" name="PPE" min="0" required>
+                                <div class="invalid-feedback">Please provide a valid value</div>
+                            </div>
+
+                            <div class="text-center mt-4">
+                                <button type="submit" class="btn btn-primary px-4" id="predictBtn">Predict Parkinson's Risk</button>
+                                <a href="{{ url_for('index') }}" class="btn btn-secondary ms-2">Back to Home</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mt-4 p-3 text-center text-muted border-top">
+            <p><strong>Note:</strong> This system is for educational purposes only and not a substitute for professional medical advice.</p>
+            <p>&copy; 2025 Medical Diagnosis System</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Form validation
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('parkinsonsForm');
+            const predictBtn = document.getElementById('predictBtn');
+            const formInputs = form.querySelectorAll('input, select');
+
+            // Function to check if the form is valid
+            function validateForm() {
+                let valid = true;
+                formInputs.forEach(input => {
+                    if (!input.value || input.value === '') {
+                        valid = false;
+                    }
+                });
+                return valid;
+            }
+
+            // Add event listeners to all inputs
+            formInputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    // Remove this line to keep button always enabled
+                    // predictBtn.disabled = !validateForm();
+                });
+            });
+
+            // Fill test data button
+            document.getElementById('fillTestData').addEventListener('click', function() {
+                // Generate random values within appropriate ranges according to the field labels
+                document.getElementById('MDVP:Fo(Hz)').value = (Math.random() * 180 + 80).toFixed(3); // 80-260 Hz
+                document.getElementById('MDVP:Fhi(Hz)').value = (Math.random() * 500 + 100).toFixed(3); // 100-600 Hz
+                document.getElementById('MDVP:Flo(Hz)').value = (Math.random() * 175 + 65).toFixed(3); // 65-240 Hz
+                document.getElementById('MDVP:Jitter(%)').value = (Math.random() * 0.019 + 0.0001).toFixed(5); // 0.0001-0.02
+                document.getElementById('MDVP:Jitter(Abs)').value = (Math.random() * 0.000099 + 0.000001).toFixed(6); // 0.000001-0.0001
+                document.getElementById('MDVP:RAP').value = (Math.random() * 0.0199 + 0.0001).toFixed(5); // 0.0001-0.02
+                document.getElementById('MDVP:PPQ').value = (Math.random() * 0.0199 + 0.0001).toFixed(5); // 0.0001-0.02
+                document.getElementById('Jitter:DDP').value = (Math.random() * 0.0499 + 0.0001).toFixed(5); // 0.0001-0.05
+                document.getElementById('MDVP:Shimmer').value = (Math.random() * 0.14 + 0.01).toFixed(5); // 0.01-0.15
+                document.getElementById('MDVP:Shimmer(dB)').value = (Math.random() * 1.4 + 0.1).toFixed(3); // 0.1-1.5
+                document.getElementById('Shimmer:APQ3').value = (Math.random() * 0.14 + 0.01).toFixed(5); // 0.01-0.15
+                document.getElementById('NHR').value = (Math.random() * 0.49 + 0.01).toFixed(5); // 0.01-0.5
+                document.getElementById('HNR').value = (Math.random() * 22 + 8).toFixed(3); // 8-30
+                document.getElementById('RPDE').value = (Math.random() * 0.45 + 0.25).toFixed(6); // 0.25-0.7
+                document.getElementById('DFA').value = (Math.random() * 0.5 + 0.5).toFixed(6); // 0.5-1.0
+                document.getElementById('spread1').value = (Math.random() * -8).toFixed(4); // -8-0
+                document.getElementById('spread2').value = (Math.random() * 4).toFixed(6); // 0-4
+                document.getElementById('D2').value = (Math.random() * 2.5 + 1.5).toFixed(6); // 1.5-4
+                document.getElementById('PPE').value = (Math.random() * 0.4 + 0.1).toFixed(6); // 0.1-0.5
+            });
+
+            // Bootstrap form validation
+            form.addEventListener('submit', function(event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            });
+        });
+    </script>
+</body>
+</html>
