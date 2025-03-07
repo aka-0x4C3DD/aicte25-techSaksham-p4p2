@@ -1,13 +1,13 @@
 <div align="center">
 
-# AICTE TechSaksham Medical Diagnosis Project 🚀
+# AICTE TechSaksham Medical Diagnosis Project 
 
 ![GitHub license](https://img.shields.io/github/license/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
 ![GitHub issues](https://img.shields.io/github/issues/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
 ![GitHub stars](https://img.shields.io/github/stars/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
 ![GitHub forks](https://img.shields.io/github/forks/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
 ![GitHub last commit](https://img.shields.io/github/last-commit/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
-<img src="https://img.shields.io/badge/python-3.9-blue.svg">
+<img src="https://img.shields.io/badge/python-3.10-blue.svg">
 
 </div>
 
@@ -17,23 +17,22 @@
 
 <div align="center">
 
-## 📋 Table of Contents
+<!-- ## 📋 Table of Contents
 
 </div>
 
-- [AICTE TechSaksham Medical Diagnosis Project 🚀](#aicte-techsaksham-medical-diagnosis-project-)
-  - [📋 Table of Contents](#-table-of-contents)
-  - [📖 About](#-about)
-  - [✨ Features](#-features)
-  - [🛠️ Technology Stack](#️-technology-stack)
-  - [🚀 Getting Started](#-getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-  - [🎮 Usage](#-usage)
-  - [👥 Contributing](#-contributing)
-  - [📄 License](#-license)
-  - [📞 Contact](#-contact)
-  - [🙏 Acknowledgements](#-acknowledgements)
+- [AICTE TechSaksham Medical Diagnosis Project](#aicte-techsaksham-medical-diagnosis-project) -->
+
+[📖 About](#-about) • 
+[✨ Features](#-features)  • 
+[🛠️ Technology Stack](#️-technology-stack)  • 
+[🚀 Getting Started](#-getting-started)  • 
+  [Prerequisites](#prerequisites)  • 
+  [Installation](#installation)  • 
+[🎮 Usage](#-usage) • 
+[👥 Contributing](#-contributing) • 
+[📄 License](#-license) • 
+[🙏 Acknowledgements](#-acknowledgements)
 
 <div align="center">
 
@@ -68,14 +67,14 @@ This project, developed as part of the AICTE TechSaksham program, provides a web
 
 </div>
 
--   ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
--   ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
--   ![Scikit-learn](https://img.shields.io/badge/ScikitLearn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
--   ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
--   ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
--   ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
--   ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
--   ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+   ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+   ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+   ![Scikit-learn](https://img.shields.io/badge/ScikitLearn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+   ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+   ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+   ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+   ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+   ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
 <div align="center">
 
@@ -159,15 +158,15 @@ Contributions are welcome! Please follow these steps:
 
 </div>
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the Unilicense License. See `LICENSE` for more information.
 
 <div align="center">
 
-## 📞 Contact
+<!-- ## 📞 Contact
 
 </div>
 
-Project Link: [https://github.com/aka-0x4C3DD/aicte25-techSaksham-p4p2](https://github.com/aka-0x4C3DD/aicte25-techSaksham-p4p2)
+Project Link: [https://github.com/aka-0x4C3DD/aicte25-techSaksham-p4p2](https://github.com/aka-0x4C3DD/aicte25-techSaksham-p4p2) -->
 
 <div align="center">
 
