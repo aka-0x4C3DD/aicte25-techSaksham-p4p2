@@ -2,9 +2,10 @@
 
 # AICTE TechSaksham Medical Diagnosis Project 
 
-![GitHub license](https://img.shields.io/github/license/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
-![GitHub issues](https://img.shields.io/github/issues/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
-![GitHub last commit](https://img.shields.io/github/last-commit/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
+![License](https://img.shields.io/github/license/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
+![Issues](https://img.shields.io/github/issues/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
+![Last Commit](https://img.shields.io/github/last-commit/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
+[![Code Size](https://img.shields.io/github/languages/code-size/aka-0x4C3DD/aicte25-techSaksham-p4p2.svg)]()
 <img src="https://img.shields.io/badge/python-3.10-blue.svg">
 <!--![GitHub stars](https://img.shields.io/github/stars/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
 ![GitHub forks](https://img.shields.io/github/forks/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square) -->
