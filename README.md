@@ -2,26 +2,20 @@
 
 # AICTE TechSaksham Medical Diagnosis Project 
 
-![GitHub license](https://img.shields.io/github/license/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
-![GitHub issues](https://img.shields.io/github/issues/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
-![GitHub stars](https://img.shields.io/github/stars/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
-![GitHub forks](https://img.shields.io/github/forks/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
-![GitHub last commit](https://img.shields.io/github/last-commit/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
+![License](https://img.shields.io/github/license/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
+![Issues](https://img.shields.io/github/issues/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
+<!-- ![GitHub stars](https://img.shields.io/github/stars/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
+![GitHub forks](https://img.shields.io/github/forks/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square) -->
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
+![Last Commit](https://img.shields.io/github/last-commit/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
+[![Code Size](https://img.shields.io/github/languages/code-size/aka-0x4C3DD/aicte25-techSaksham-p4p2.svg)]()
 <img src="https://img.shields.io/badge/python-3.10-blue.svg">
 
 </div>
 
 <div align="center">
   <i>A Flask web application for predicting medical conditions using machine learning models.</i>
-</div>
-
-<div align="center">
-
-<!-- ## 📋 Table of Contents
-
-</div>
-
-- [AICTE TechSaksham Medical Diagnosis Project](#aicte-techsaksham-medical-diagnosis-project) -->
+<br> 
 
 [📖 About](#-about) • 
 [✨ Features](#-features)  • 
@@ -33,6 +27,8 @@
 [👥 Contributing](#-contributing) • 
 [📄 License](#-license) • 
 [🙏 Acknowledgements](#-acknowledgements)
+
+</div>
 
 <div align="center">
 
@@ -65,7 +61,8 @@ This project, developed as part of the AICTE TechSaksham program, provides a web
 
 ## 🛠️ Technology Stack
 
-</div>
+</div> 
+<div align="center">
 
    ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
    ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -76,7 +73,9 @@ This project, developed as part of the AICTE TechSaksham program, provides a web
    ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
    ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-<div align="center">
+</div> 
+
+<div align="center"> 
 
 ## 🚀 Getting Started
 
@@ -84,7 +83,7 @@ This project, developed as part of the AICTE TechSaksham program, provides a web
 
 ### Prerequisites
 
--   Python 3.9+
+-   Python 3.10+
 -   pip
 
 ### Installation
