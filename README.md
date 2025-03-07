@@ -13,15 +13,7 @@
 
 <div align="center">
   <i>A Flask web application for predicting medical conditions using machine learning models.</i>
-</div>
-
-<div align="center">
-
-<!-- ## 📋 Table of Contents
-
-</div>
-
-- [AICTE TechSaksham Medical Diagnosis Project](#aicte-techsaksham-medical-diagnosis-project) -->
+<br> <br>
 
 [📖 About](#-about) • 
 [✨ Features](#-features)  • 
@@ -33,6 +25,8 @@
 [👥 Contributing](#-contributing) • 
 [📄 License](#-license) • 
 [🙏 Acknowledgements](#-acknowledgements)
+
+</div>
 
 <div align="center">
 
@@ -84,7 +78,7 @@ This project, developed as part of the AICTE TechSaksham program, provides a web
 
 ### Prerequisites
 
--   Python 3.9+
+-   Python 3.10+
 -   pip
 
 ### Installation
