@@ -88,7 +88,7 @@ This project, developed as part of the AICTE TechSaksham program, provides a web
 
 </div>
 
--   Python 3.9+
+-   Python <3.11
 -   pip
 
 <div align="center">
