@@ -1,3 +1,5 @@
+<div align="center">
+
 # AICTE TechSaksham Medical Diagnosis Project 🚀
 
 ![GitHub license](https://img.shields.io/github/license/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
@@ -7,11 +9,17 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
 <img src="https://img.shields.io/badge/python-3.9-blue.svg">
 
+</div>
+
 <div align="center">
   <i>A Flask web application for predicting medical conditions using machine learning models.</i>
 </div>
 
+<div align="center">
+
 ## 📋 Table of Contents
+
+</div>
 
 - [AICTE TechSaksham Medical Diagnosis Project 🚀](#aicte-techsaksham-medical-diagnosis-project-)
   - [📋 Table of Contents](#-table-of-contents)
@@ -27,11 +35,19 @@
   - [📞 Contact](#-contact)
   - [🙏 Acknowledgements](#-acknowledgements)
 
+<div align="center">
+
 ## 📖 About
+
+</div>
 
 This project, developed as part of the AICTE TechSaksham program, provides a web application for predicting various medical conditions. It utilizes machine learning models trained on different datasets to predict the likelihood of diabetes, heart disease, hypothyroid, lung cancer, and Parkinson's disease. The application is built using Flask and incorporates best practices for model management, prediction service, and user interface.
 
+<div align="center">
+
 ## ✨ Features
+
+</div>
 
 -   **Multiple Disease Prediction:** Predicts the likelihood of five different medical conditions:
     -   Diabetes (using Random Forest)
@@ -46,7 +62,11 @@ This project, developed as part of the AICTE TechSaksham program, provides a web
 -   **Data Validation:** Includes input validation to ensure data quality.
 - **Dynamic Model Loading:** Loads models from a configurable directory.
 
+<div align="center">
+
 ## 🛠️ Technology Stack
+
+</div>
 
 -   ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
 -   ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -57,7 +77,11 @@ This project, developed as part of the AICTE TechSaksham program, provides a web
 -   ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 -   ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
+<div align="center">
+
 ## 🚀 Getting Started
+
+</div>
 
 ### Prerequisites
 
@@ -101,7 +125,11 @@ This project, developed as part of the AICTE TechSaksham program, provides a web
 
 The application will be accessible at `http://localhost:5000`.
 
+<div align="center">
+
 ## 🎮 Usage
+
+</div>
 
 1.  Open a web browser and navigate to `http://localhost:5000`.
 2.  Select the disease you want to predict from the available options.
@@ -111,7 +139,11 @@ The application will be accessible at `http://localhost:5000`.
 
 You can also use the API endpoint `/api/predict/<disease>` to get predictions programmatically. Send a POST request with a JSON payload containing the required input data.
 
+<div align="center">
+
 ## 👥 Contributing
+
+</div>
 
 Contributions are welcome! Please follow these steps:
 
@@ -121,15 +153,27 @@ Contributions are welcome! Please follow these steps:
 4.  Push to the branch: `git push origin feature/your-feature-name`
 5.  Open a pull request.
 
+<div align="center">
+
 ## 📄 License
+
+</div>
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
+<div align="center">
+
 ## 📞 Contact
+
+</div>
 
 Project Link: [https://github.com/aka-0x4C3DD/aicte25-techSaksham-p4p2](https://github.com/aka-0x4C3DD/aicte25-techSaksham-p4p2)
 
+<div align="center">
+
 ## 🙏 Acknowledgements
+
+</div>
 
 -   [AICTE](https://www.aicte-india.org/)
 -   [TechSaksham Program](https://techsaksham.org/)
