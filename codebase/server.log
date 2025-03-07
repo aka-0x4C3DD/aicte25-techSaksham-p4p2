@@ -2614,3 +2614,85 @@ dtype: object
 2025-03-07 10:41:24,534 - MedicalDiagnosisServer - INFO - Starting Medical Diagnosis Server with 5 models from F:\projects\aicte25-techSaksham-p4p2\models
 2025-03-07 10:41:24,534 - werkzeug - WARNING -  * Debugger is active!
 2025-03-07 10:41:24,534 - werkzeug - INFO -  * Debugger PIN: 772-129-502
+2025-03-07 16:45:46,579 - MedicalDiagnosisServer - INFO - Using models directory: F:\projects\aicte25-techSaksham-p4p2\models
+2025-03-07 16:45:46,579 - MedicalDiagnosisServer - INFO - Scanning models directory: F:\projects\aicte25-techSaksham-p4p2\models
+2025-03-07 16:45:46,580 - MedicalDiagnosisServer - INFO - Found 14 files in models directory
+2025-03-07 16:45:46,580 - MedicalDiagnosisServer - INFO - Found random_forest model for diabetes: diabetes_random_forest_model.pkl
+2025-03-07 16:45:46,580 - MedicalDiagnosisServer - INFO - Found disease_tensorflow model for heart: heart_disease_tensorflow_model.keras
+2025-03-07 16:45:46,580 - MedicalDiagnosisServer - INFO - Found logistic_regression model for hypothyroid: hypothyroid_logistic_regression_model.pkl
+2025-03-07 16:45:46,580 - MedicalDiagnosisServer - INFO - Found cancer_logistic_regression model for lung: lung_cancer_logistic_regression_model.pkl
+2025-03-07 16:45:46,580 - MedicalDiagnosisServer - INFO - Found cancer_random_forest model for lung: lung_cancer_random_forest_model.pkl
+2025-03-07 16:45:46,580 - MedicalDiagnosisServer - INFO - Found cancer_tensorflow model for lung: lung_cancer_tensorflow_model.keras
+2025-03-07 16:45:46,580 - MedicalDiagnosisServer - INFO - Found tensorflow model for parkinsons: parkinsons_tensorflow_model.keras
+2025-03-07 16:45:46,580 - MedicalDiagnosisServer - INFO - Selected random_forest model for diabetes
+2025-03-07 16:45:47,057 - MedicalDiagnosisServer - INFO - Loaded scikit-learn model from F:\projects\aicte25-techSaksham-p4p2\models\diabetes_random_forest_model.pkl
+2025-03-07 16:45:47,057 - MedicalDiagnosisServer - INFO - Loaded scaler from F:\projects\aicte25-techSaksham-p4p2\models\diabetes_scaler.pkl
+2025-03-07 16:45:47,057 - MedicalDiagnosisServer - INFO - Selected disease_tensorflow model for heart
+2025-03-07 16:45:47,366 - MedicalDiagnosisServer - INFO - Loaded TensorFlow model from F:\projects\aicte25-techSaksham-p4p2\models\heart_disease_tensorflow_model.keras
+2025-03-07 16:45:47,366 - MedicalDiagnosisServer - WARNING - Scaler file not found: F:\projects\aicte25-techSaksham-p4p2\models\heart_scaler.pkl
+2025-03-07 16:45:47,366 - MedicalDiagnosisServer - WARNING - No scaler found for heart. Using default StandardScaler.
+2025-03-07 16:45:47,366 - MedicalDiagnosisServer - INFO - Selected logistic_regression model for hypothyroid
+2025-03-07 16:45:47,366 - MedicalDiagnosisServer - INFO - Loaded scikit-learn model from F:\projects\aicte25-techSaksham-p4p2\models\hypothyroid_logistic_regression_model.pkl
+2025-03-07 16:45:47,366 - MedicalDiagnosisServer - INFO - Loaded scaler from F:\projects\aicte25-techSaksham-p4p2\models\hypothyroid_scaler.pkl
+2025-03-07 16:45:47,366 - MedicalDiagnosisServer - INFO - Selected cancer_logistic_regression model for lung
+2025-03-07 16:45:47,366 - MedicalDiagnosisServer - INFO - Loaded scikit-learn model from F:\projects\aicte25-techSaksham-p4p2\models\lung_cancer_logistic_regression_model.pkl
+2025-03-07 16:45:47,366 - MedicalDiagnosisServer - WARNING - Scaler file not found: F:\projects\aicte25-techSaksham-p4p2\models\lung_scaler.pkl
+2025-03-07 16:45:47,366 - MedicalDiagnosisServer - WARNING - No scaler found for lung. Using default StandardScaler.
+2025-03-07 16:45:47,368 - MedicalDiagnosisServer - INFO - Selected tensorflow model for parkinsons
+2025-03-07 16:45:47,562 - MedicalDiagnosisServer - INFO - Loaded TensorFlow model from F:\projects\aicte25-techSaksham-p4p2\models\parkinsons_tensorflow_model.keras
+2025-03-07 16:45:47,562 - MedicalDiagnosisServer - INFO - Loaded scaler from F:\projects\aicte25-techSaksham-p4p2\models\parkinsons_scaler.pkl
+2025-03-07 16:45:47,562 - MedicalDiagnosisServer - INFO - Loaded 5 models
+2025-03-07 16:45:47,564 - MedicalDiagnosisServer - INFO - Starting Medical Diagnosis Server with 5 models from F:\projects\aicte25-techSaksham-p4p2\models
+2025-03-07 16:45:47,584 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.7.67.201:5000
+2025-03-07 16:45:47,584 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-07 16:45:47,586 - werkzeug - INFO -  * Restarting with stat
+2025-03-07 16:45:52,291 - MedicalDiagnosisServer - INFO - Using models directory: F:\projects\aicte25-techSaksham-p4p2\models
+2025-03-07 16:45:52,291 - MedicalDiagnosisServer - INFO - Scanning models directory: F:\projects\aicte25-techSaksham-p4p2\models
+2025-03-07 16:45:52,291 - MedicalDiagnosisServer - INFO - Found 14 files in models directory
+2025-03-07 16:45:52,291 - MedicalDiagnosisServer - INFO - Found random_forest model for diabetes: diabetes_random_forest_model.pkl
+2025-03-07 16:45:52,292 - MedicalDiagnosisServer - INFO - Found disease_tensorflow model for heart: heart_disease_tensorflow_model.keras
+2025-03-07 16:45:52,292 - MedicalDiagnosisServer - INFO - Found logistic_regression model for hypothyroid: hypothyroid_logistic_regression_model.pkl
+2025-03-07 16:45:52,292 - MedicalDiagnosisServer - INFO - Found cancer_logistic_regression model for lung: lung_cancer_logistic_regression_model.pkl
+2025-03-07 16:45:52,292 - MedicalDiagnosisServer - INFO - Found cancer_random_forest model for lung: lung_cancer_random_forest_model.pkl
+2025-03-07 16:45:52,292 - MedicalDiagnosisServer - INFO - Found cancer_tensorflow model for lung: lung_cancer_tensorflow_model.keras
+2025-03-07 16:45:52,292 - MedicalDiagnosisServer - INFO - Found tensorflow model for parkinsons: parkinsons_tensorflow_model.keras
+2025-03-07 16:45:52,292 - MedicalDiagnosisServer - INFO - Selected random_forest model for diabetes
+2025-03-07 16:45:52,429 - MedicalDiagnosisServer - INFO - Loaded scikit-learn model from F:\projects\aicte25-techSaksham-p4p2\models\diabetes_random_forest_model.pkl
+2025-03-07 16:45:52,430 - MedicalDiagnosisServer - INFO - Loaded scaler from F:\projects\aicte25-techSaksham-p4p2\models\diabetes_scaler.pkl
+2025-03-07 16:45:52,430 - MedicalDiagnosisServer - INFO - Selected disease_tensorflow model for heart
+2025-03-07 16:45:52,670 - MedicalDiagnosisServer - INFO - Loaded TensorFlow model from F:\projects\aicte25-techSaksham-p4p2\models\heart_disease_tensorflow_model.keras
+2025-03-07 16:45:52,670 - MedicalDiagnosisServer - WARNING - Scaler file not found: F:\projects\aicte25-techSaksham-p4p2\models\heart_scaler.pkl
+2025-03-07 16:45:52,671 - MedicalDiagnosisServer - WARNING - No scaler found for heart. Using default StandardScaler.
+2025-03-07 16:45:52,671 - MedicalDiagnosisServer - INFO - Selected logistic_regression model for hypothyroid
+2025-03-07 16:45:52,671 - MedicalDiagnosisServer - INFO - Loaded scikit-learn model from F:\projects\aicte25-techSaksham-p4p2\models\hypothyroid_logistic_regression_model.pkl
+2025-03-07 16:45:52,672 - MedicalDiagnosisServer - INFO - Loaded scaler from F:\projects\aicte25-techSaksham-p4p2\models\hypothyroid_scaler.pkl
+2025-03-07 16:45:52,672 - MedicalDiagnosisServer - INFO - Selected cancer_logistic_regression model for lung
+2025-03-07 16:45:52,672 - MedicalDiagnosisServer - INFO - Loaded scikit-learn model from F:\projects\aicte25-techSaksham-p4p2\models\lung_cancer_logistic_regression_model.pkl
+2025-03-07 16:45:52,672 - MedicalDiagnosisServer - WARNING - Scaler file not found: F:\projects\aicte25-techSaksham-p4p2\models\lung_scaler.pkl
+2025-03-07 16:45:52,672 - MedicalDiagnosisServer - WARNING - No scaler found for lung. Using default StandardScaler.
+2025-03-07 16:45:52,672 - MedicalDiagnosisServer - INFO - Selected tensorflow model for parkinsons
+2025-03-07 16:45:52,859 - MedicalDiagnosisServer - INFO - Loaded TensorFlow model from F:\projects\aicte25-techSaksham-p4p2\models\parkinsons_tensorflow_model.keras
+2025-03-07 16:45:52,859 - MedicalDiagnosisServer - INFO - Loaded scaler from F:\projects\aicte25-techSaksham-p4p2\models\parkinsons_scaler.pkl
+2025-03-07 16:45:52,859 - MedicalDiagnosisServer - INFO - Loaded 5 models
+2025-03-07 16:45:52,861 - MedicalDiagnosisServer - INFO - Starting Medical Diagnosis Server with 5 models from F:\projects\aicte25-techSaksham-p4p2\models
+2025-03-07 16:45:52,868 - werkzeug - WARNING -  * Debugger is active!
+2025-03-07 16:45:52,872 - werkzeug - INFO -  * Debugger PIN: 772-129-502
+2025-03-07 16:45:53,703 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 16:45:53] "GET / HTTP/1.1" 200 -
+2025-03-07 16:45:54,017 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 16:45:54] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-07 16:45:54,024 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 16:45:54] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-03-07 16:45:54,228 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 16:45:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-07 16:46:22,912 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 16:46:22] "GET /predict/heart HTTP/1.1" 200 -
+2025-03-07 16:46:23,073 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 16:46:23] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-07 16:46:39,471 - MedicalDiagnosisServer - INFO - Expected features for heart: ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal']
+2025-03-07 16:46:39,471 - MedicalDiagnosisServer - INFO - Form data keys: ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal']
+2025-03-07 16:46:39,477 - MedicalDiagnosisServer - INFO - Input dataframe columns: ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal']
+2025-03-07 16:46:39,477 - MedicalDiagnosisServer - INFO - Fitting new scaler for heart model
+2025-03-07 16:46:40,055 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 16:46:40] "POST /predict/heart HTTP/1.1" 200 -
+2025-03-07 16:46:40,223 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 16:46:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-07 16:46:40,230 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 16:46:40] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-07 16:46:51,499 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 16:46:51] "GET / HTTP/1.1" 200 -
+2025-03-07 16:46:51,642 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 16:46:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-07 16:46:51,647 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 16:46:51] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
