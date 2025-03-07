@@ -4,10 +4,11 @@
 
 ![GitHub license](https://img.shields.io/github/license/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
 ![GitHub issues](https://img.shields.io/github/issues/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
-<!--![GitHub stars](https://img.shields.io/github/stars/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
-![GitHub forks](https://img.shields.io/github/forks/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square) -->
 ![GitHub last commit](https://img.shields.io/github/last-commit/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
 <img src="https://img.shields.io/badge/python-3.10-blue.svg">
+<!--![GitHub stars](https://img.shields.io/github/stars/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
+![GitHub forks](https://img.shields.io/github/forks/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square) -->
+
 
 </div>
 
@@ -18,9 +19,9 @@
 [📖 About](#-about) • 
 [✨ Features](#-features)  • 
 [🛠️ Technology Stack](#️-technology-stack)  • 
-[🚀 Getting Started](#-getting-started)  • 
-  [Prerequisites](#prerequisites)  • 
-  [Installation](#installation)  • 
+<!-- [🚀 Getting Started](#-getting-started)  • -->
+[📦 Prerequisites](#prerequisites)  • 
+[📥 Installation](#installation)  • 
 [🎮 Usage](#-usage) • 
 [👥 Contributing](#-contributing) • 
 [📄 License](#-license) • 
@@ -72,18 +73,28 @@ This project, developed as part of the AICTE TechSaksham program, provides a web
    ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
 </div>
+<!-- 
 <div align="center">
 
 ## 🚀 Getting Started
 
+</div> 
+-->
+
+<div align="center">
+
+## 📦 Prerequisites
+
 </div>
 
-### Prerequisites
-
--   Python 3.10+
+-   Python 3.9+
 -   pip
 
-### Installation
+<div align="center">
+
+## 📥 Installation
+
+</div>
 
 1.  Clone the repository:
 
@@ -103,7 +114,7 @@ This project, developed as part of the AICTE TechSaksham program, provides a web
     pip install -r requirements.txt
     ```
 
-4. Run the application using the provided shell script (for Unix-like systems) or batch file (for Windows):
+4.  Run the application using the provided shell script (for Unix-like systems) or batch file (for Windows):
 
     ```bash
     # For Unix-like systems (macOS, Linux)
@@ -112,7 +123,7 @@ This project, developed as part of the AICTE TechSaksham program, provides a web
     # For Windows
     run.bat
     ```
-    
+
     Or, run the Flask server directly:
     ```bash
     python codebase/server.py
