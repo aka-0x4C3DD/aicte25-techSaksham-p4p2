@@ -1,19 +1,19 @@
-# AICTE TechSaksham Project 🚀
+# AICTE TechSaksham Medical Diagnosis Project 🚀
 
 ![GitHub license](https://img.shields.io/github/license/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
 ![GitHub issues](https://img.shields.io/github/issues/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
 ![GitHub stars](https://img.shields.io/github/stars/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
 ![GitHub forks](https://img.shields.io/github/forks/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
 ![GitHub last commit](https://img.shields.io/github/last-commit/aka-0x4C3DD/aicte25-techSaksham-p4p2?style=flat-square)
+<img src="https://img.shields.io/badge/python-3.9-blue.svg">
 
 <div align="center">
-  <img src="https://via.placeholder.com/150" alt="Project Logo" width="150px" height="150px">
-  <br>
-  <i>A comprehensive project developed under the AICTE TechSaksham program to solve real-world challenges</i>
+  <i>A Flask web application for predicting medical conditions using machine learning models.</i>
 </div>
 
 ## 📋 Table of Contents
-- [AICTE TechSaksham Project 🚀](#aicte-techsaksham-project-)
+
+- [AICTE TechSaksham Medical Diagnosis Project 🚀](#aicte-techsaksham-medical-diagnosis-project-)
   - [📋 Table of Contents](#-table-of-contents)
   - [📖 About](#-about)
   - [✨ Features](#-features)
@@ -22,106 +22,120 @@
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
   - [🎮 Usage](#-usage)
-  - [🗺️ Roadmap](#️-roadmap)
   - [👥 Contributing](#-contributing)
   - [📄 License](#-license)
   - [📞 Contact](#-contact)
   - [🙏 Acknowledgements](#-acknowledgements)
 
 ## 📖 About
-This project is part of the AICTE TechSaksham program, designed to enhance technological skills and provide innovative solutions to real-world problems. It focuses on implementing practical applications while learning and applying cutting-edge technologies.
+
+This project, developed as part of the AICTE TechSaksham program, provides a web application for predicting various medical conditions. It utilizes machine learning models trained on different datasets to predict the likelihood of diabetes, heart disease, hypothyroid, lung cancer, and Parkinson's disease. The application is built using Flask and incorporates best practices for model management, prediction service, and user interface.
 
 ## ✨ Features
-- Feature 1: Description of what it does
-- Feature 2: Description of what it does  
-- Feature 3: Description of what it does
-- Feature 4: Description of what it does
+
+-   **Multiple Disease Prediction:** Predicts the likelihood of five different medical conditions:
+    -   Diabetes (using Random Forest)
+    -   Heart Disease (using TensorFlow)
+    -   Hypothyroid (using Logistic Regression)
+    -   Lung Cancer (using Random Forest)
+    -   Parkinson's Disease (using TensorFlow)
+-   **Web Interface:** User-friendly web interface for inputting data and receiving predictions.
+-   **API Endpoint:** Provides an API endpoint (`/api/predict/<disease>`) for programmatic access to predictions.
+-   **Model Management:** Efficiently loads and manages multiple machine learning models.
+-   **Scalable Architecture:** Designed with a modular architecture for easy extension and maintenance.
+-   **Data Validation:** Includes input validation to ensure data quality.
+- **Dynamic Model Loading:** Loads models from a configurable directory.
 
 ## 🛠️ Technology Stack
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+
+-   ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+-   ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+-   ![Scikit-learn](https://img.shields.io/badge/ScikitLearn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+-   ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+-   ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+-   ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+-   ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+-   ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js (v14.x or later)
-- npm (v6.x or later)
-- MongoDB (v4.x or later)
-- Other dependencies...
+
+-   Python 3.9+
+-   pip
 
 ### Installation
-1. Clone the repository
-   ```bash
-   git clone https://github.com/aka-0x4C3DD/aicte25-techSaksham-p4p2.git
-   ```
 
-2. Navigate to the project directory
-   ```bash
-   cd aicte25-techSaksham-p4p2
-   ```
+1.  Clone the repository:
 
-3. Install dependencies
-   ```bash
-   npm install
-   ```
+    ```bash
+    git clone https://github.com/aka-0x4C3DD/aicte25-techSaksham-p4p2.git
+    ```
 
-4. Configure environment variables
-   ```bash
-   cp .env.example .env
-   # Edit .env with your configuration
-   ```
+2.  Navigate to the project directory:
 
-5. Start the development server
-   ```bash
-   npm run dev
-   ```
+    ```bash
+    cd aicte25-techSaksham-p4p2
+    ```
+
+3.  Install dependencies:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. Run the application using the provided shell script (for Unix-like systems) or batch file (for Windows):
+
+    ```bash
+    # For Unix-like systems (macOS, Linux)
+    ./run.sh
+
+    # For Windows
+    run.bat
+    ```
+    
+    Or, run the Flask server directly:
+    ```bash
+    python codebase/server.py
+    ```
+
+The application will be accessible at `http://localhost:5000`.
 
 ## 🎮 Usage
-Explain how to use your project with examples and screenshots.
 
-```javascript
-// Example code snippet if applicable
-const example = () => {
-  console.log('This is how you might use a feature');
-};
-```
+1.  Open a web browser and navigate to `http://localhost:5000`.
+2.  Select the disease you want to predict from the available options.
+3.  Fill in the required input fields on the prediction form.
+4.  Click the "Predict" button to submit the form.
+5.  The prediction result, along with the confidence level (if available), will be displayed on the results page.
 
-## 🗺️ Roadmap
-- [ ] Feature 1 implementation
-- [ ] Feature 2 implementation
-- [ ] Feature 3 implementation
-- [ ] Bug fixes and optimization
-- [ ] Documentation improvements
+You can also use the API endpoint `/api/predict/<disease>` to get predictions programmatically. Send a POST request with a JSON payload containing the required input data.
 
 ## 👥 Contributing
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+Contributions are welcome! Please follow these steps:
+
+1.  Fork the repository.
+2.  Create a new branch for your feature or bug fix: `git checkout -b feature/your-feature-name`
+3.  Commit your changes: `git commit -m "Add your commit message"`
+4.  Push to the branch: `git push origin feature/your-feature-name`
+5.  Open a pull request.
 
 ## 📄 License
+
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📞 Contact
-Project Lead - [@your_twitter](https://twitter.com/your_twitter)
 
 Project Link: [https://github.com/aka-0x4C3DD/aicte25-techSaksham-p4p2](https://github.com/aka-0x4C3DD/aicte25-techSaksham-p4p2)
 
 ## 🙏 Acknowledgements
-- [AICTE](https://www.aicte-india.org/)
-- [TechSaksham Program](https://techsaksham.org/)
-- [All Contributors](https://github.com/aka-0x4C3DD/aicte25-techSaksham-p4p2/contributors)
-- Mention any third-party libraries or resources used
+
+-   [AICTE](https://www.aicte-india.org/)
+-   [TechSaksham Program](https://techsaksham.org/)
 
 ---
 
 <div align="center">
-  made with ❤️ by open source contributors
+    made with ❤️ by open source contributors
 </div>
